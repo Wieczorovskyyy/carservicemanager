@@ -31,6 +31,7 @@ CREATE TABLE `appointments` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `car_model` varchar(120) NOT NULL,
+  `mileage` int(10) unsigned DEFAULT NULL,
   `service_type` varchar(120) NOT NULL,
   `description` text DEFAULT NULL,
   `appointment_date` datetime DEFAULT NULL,

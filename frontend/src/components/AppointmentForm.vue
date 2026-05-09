@@ -154,10 +154,11 @@ export default {
       try {
         // Łączymy markę i model w jedno pole car_model dla kompatybilności z obecnym backendem
         const carFullModel = `${this.form.brand} ${this.form.model}`;
+        const mileage = this.form.mileage === "" || this.form.mileage === null ? null : this.form.mileage;
         
         await API.post("/appointments", {
           car_model: carFullModel,
-          mileage: this.form.mileage || null,
+          mileage,
           service_type: this.form.service_type,
           description: this.form.description,
           appointment_date: null // Administrator przypisze datę
