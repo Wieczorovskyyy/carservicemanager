@@ -22,6 +22,7 @@ exports.register = (req, res) => {
   });
 };
 
+console.log(bcrypt.hashSync("admin", 10))
 exports.login = (req, res) => {
   const { email, password } = req.body;
 
